@@ -10,13 +10,20 @@ export default defineNuxtConfig({
       CONTENTFUL_ACCESS_TOKEN: process.env.CTF_ACCESS_TOKEN,
     },
   },
-  css: [
-    "~/assets/css/main.scss"
-  ],
+  components: {
+    global: true,
+    dirs: [
+      {
+        path: "~/components",
+        pathPrefix: false, // Disables the prefixing based on directory structure
+      },
+    ],
+  },
+  css: ["~/assets/css/main.scss"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-})
+});
