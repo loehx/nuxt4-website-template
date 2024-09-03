@@ -22,7 +22,7 @@ const { primaryColor } = useDesign()
   </div>
 </template>
 
-<style scoped lang="scss"">
+<style scoped lang="scss">
 
 .navigation {
   &__overlay {
