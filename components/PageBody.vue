@@ -1,8 +1,11 @@
 <script lang="ts" setup>
-const { title, photo, imageCaption, author } = await getPostByAuthor("Janine McKay");
+const { title, photo, imageCaption, author } = await getPostByAuthor(
+  "Janine McKay"
+);
 </script>
 
 <template>
+  <Navigation />
   <article>
     <header>
       <h1>
@@ -11,9 +14,9 @@ const { title, photo, imageCaption, author } = await getPostByAuthor("Janine McK
     </header>
     <div>
       {{ imageCaption }}
-      <br>
-      <img :src="photo.fields.file.url" style="width: 50%">
-      <br>
+      <br />
+      <img :src="photo.fields.file.url" style="width: 50%" />
+      <br />
       by {{ author.fields.name }}
     </div>
   </article>
