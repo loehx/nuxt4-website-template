@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { items, isOpen } = useNavigation();
-const { primaryColor } = useDesign()
+const { primaryColor } = useDesign();
 </script>
 
 <template>
@@ -16,14 +16,15 @@ const { primaryColor } = useDesign()
         </li>
       </ul>
     </nav>
-    <button @click.prevent="isOpen = !isOpen" class="navigation__toggle">
-      {{ isOpen ? 'Close Navi' : 'Open Navi' }}
-    </button>
+    <ObnoxiousBurger
+      :open="isOpen"
+      @click="isOpen = !isOpen"
+      class="fixed bottom-0 right-0 size-[80px] transition"
+    />
   </div>
 </template>
 
 <style scoped lang="scss">
-
 .navigation {
   &__overlay {
     opacity: 0;
