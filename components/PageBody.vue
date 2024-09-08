@@ -5,6 +5,8 @@ const { title, photo, imageCaption, author } = await getPostByAuthor(
 </script>
 
 <template>
+  <FontLoader />
+  <Stage />
   <Navigation />
   <article>
     <header>

@@ -26,6 +26,9 @@ const { primaryColor } = useDesign();
 
 <style scoped lang="scss">
 .navigation {
+  z-index: 99;
+  position: relative;
+
   &__overlay {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
