@@ -1,6 +1,6 @@
 export default function useDesign() {
   const ctx = useContext("stage", () => ({
-    design: ref("ilythia"),
+    design: ref("ilithya"),
     h1: ref("Lorem Ipsum"),
     h2: ref("Dolor Sit Amet Consectetur"),
   }));

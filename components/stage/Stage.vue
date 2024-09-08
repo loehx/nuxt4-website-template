@@ -3,6 +3,6 @@ const { design } = useStage();
 </script>
 
 <template>
-  <IlythiaStage v-if="design === 'ilythia'" />
+  <IlithyaStage v-if="design === 'ilithya'" />
   <!-- add more designs here ... -->
 </template>

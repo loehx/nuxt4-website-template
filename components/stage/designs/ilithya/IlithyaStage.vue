@@ -4,9 +4,9 @@ const { h1, h2 } = useStage();
 
 <template>
   <div class="stage">
-    <IlythiaShader class="stage__shader-background" />
+    <IlithyaShader class="stage__shader-background" />
     <div class="stage__shader-wrapper">
-      <IlythiaShader class="stage__shader" />
+      <IlithyaShader class="stage__shader" />
     </div>
     <div class="stage__gradient"></div>
     <div class="stage__content">
