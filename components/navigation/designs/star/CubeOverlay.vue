@@ -78,7 +78,6 @@ if (import.meta.client) {
 
   &--open {
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     pointer-events: all;
   }
 }

@@ -2,7 +2,7 @@
   <div>
     <FontLoader />
     <Stage />
-    <Navigation />
     <slot />
+    <Navigation />
   </div>
 </template>
