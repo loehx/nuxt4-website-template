@@ -16,16 +16,19 @@ const { primaryColor } = useDesign();
         </li>
       </ul>
     </nav>
-    <ObnoxiousBurger
+    <StarBurger
       :open="isOpen"
       @click="isOpen = !isOpen"
-      class="fixed bottom-0 right-0 size-[80px] transition"
+      class="fixed bottom-2 right-2"
     />
   </div>
 </template>
 
 <style scoped lang="scss">
 .navigation {
+  z-index: 99;
+  position: relative;
+
   &__overlay {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);

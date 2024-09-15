@@ -12,6 +12,7 @@
   "dependencies": {
     "contentful": "^10.13.2",
     "nuxt": "^3.12.4",
+    "ogl": "^1.0.8",
     "sass": "^1.77.8",
     "vue": "latest"
   },
