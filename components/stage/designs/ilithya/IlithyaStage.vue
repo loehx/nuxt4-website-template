@@ -39,10 +39,10 @@ const { h1, h2 } = useStage();
 
   &__shader-wrapper {
     position: absolute;
-    top: 10vh;
+    top: 100px;
     left: 0;
-    right: 10vw;
-    bottom: 20vh;
+    right: 100px;
+    bottom: 0;
     overflow: hidden;
   }
 

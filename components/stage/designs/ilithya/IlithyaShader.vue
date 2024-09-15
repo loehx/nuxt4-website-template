@@ -19,18 +19,18 @@ precision highp float;
 
 uniform vec2 u_resolution;
 uniform float u_time;
+// uniform vec3 u_color1;
 
 void main() {
-	vec2 uv = (gl_FragCoord.xy - u_resolution * 0.5) / u_resolution.y;    
-
+	vec2 uv = (gl_FragCoord.xy - u_resolution * 0.5) / u_resolution.y;   
+	
 	float walk = u_time * 0.75;
 	
 	vec3 color = vec3(0.5, uv.x + sin(walk * 0.5) * 0.5, uv.y + sin(walk)* 0.5 );
-	color = mix(color, vec3(pow(uv.y, uv.x * 0.25)), color + 0.25 );
+	color = mix(color, vec3(pow( abs(uv.y), uv.x * 0.5)), color + 0.25 );
 
-  gl_FragColor = vec4(color, 1.0);
-}    
-
+    gl_FragColor = vec4(color, 1.0);
+}
 `
 );
 

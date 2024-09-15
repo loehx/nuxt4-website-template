@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Renderer, Transform, Box, Program, Mesh, Vec2, Triangle } from "ogl";
+import { Renderer, Program, Mesh, Vec2, Triangle } from "ogl";
 
 const container = ref<HTMLElement | null>(null);
 const props = defineProps<{
@@ -24,6 +24,7 @@ if (import.meta.client) {
     uniforms: {
       u_resolution: { value: new Vec2(window.innerWidth, window.innerHeight) },
       u_time: { value: 0 },
+      u_mouse: { value: new Vec2(0, 0) },
     },
   });
 
@@ -41,11 +42,20 @@ if (import.meta.client) {
     container.value.appendChild(gl.canvas);
   });
 
+  function mouseMove(event: MouseEvent) {
+    program.uniforms.u_mouse.value.x = event.clientX;
+    program.uniforms.u_mouse.value.y = event.clientY;
+  }
+
   onMounted(() => {
     resize();
     window.addEventListener("resize", resize);
+    window.addEventListener("mousemove", mouseMove);
   });
-  onUnmounted(() => window.removeEventListener("resize", resize));
+  onUnmounted(() => {
+    window.removeEventListener("resize", resize);
+    window.removeEventListener("mousemove", mouseMove);
+  });
 }
 </script>
 
