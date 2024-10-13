@@ -1,6 +1,8 @@
 <script lang="ts" setup>
-const { items, isOpen } = useNavigation();
-const { primaryColor } = useDesign();
+const ctx = useContext();
+const { items, isOpen } = ctx.nav;
+const { primaryColor } = ctx.theme;
+const { design } = ctx.nav;
 </script>
 
 <template>
@@ -20,6 +22,11 @@ const { primaryColor } = useDesign();
       :open="isOpen"
       @click="isOpen = !isOpen"
       class="fixed bottom-2 right-2"
+    />
+    <StarBurger
+      :open="isOpen"
+      @click="isOpen = !isOpen"
+      class="fixed top-2 left-2"
     />
   </div>
 </template>

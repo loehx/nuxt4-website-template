@@ -1,10 +1,9 @@
-const contextMap = {};
-if (import.meta.client) {
-  (window as any).ctx = contextMap;
-}
+import type { PageContext } from "../useContext";
 
-export default function useContextDebugger<T>(name: string, ctx: T) {
-  (window as any)[name] = ctx;
+export default function useContextDebugger(ctx: PageContext) {
+  if (import.meta.client) {
+    (window as any).ctx = ctx;
+  }
 
   for (const key in ctx) {
     if (!isRef(ctx[key])) continue;

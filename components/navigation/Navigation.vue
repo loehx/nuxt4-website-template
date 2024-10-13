@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-const { design } = useNavigation();
+const { nav } = useContext();
 </script>
 
 <template>
-  <StarNavigation v-if="design === 'star'" />
+  <StarNavigation v-if="nav.design.value === 'star'" />
   <!-- add more designs here ... -->
 </template>

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const design = useDesign();
+const { theme } = useContext();
 
-const primaryColor = computed(() => toShaderColor(design.primaryColor.value));
+const primaryColor = computed(() => toShaderColor(theme.primaryColor.value));
 const secondaryColor = computed(() =>
-  toShaderColor(design.secondaryColor.value)
+  toShaderColor(theme.secondaryColor.value)
 );
 
 const vertex = computed(

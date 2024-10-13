@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { design } = useStage();
+const { design } = useContext().stage;
 </script>
 
 <template>

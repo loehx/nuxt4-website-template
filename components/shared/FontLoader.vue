@@ -1,5 +1,6 @@
+<template></template>
 <script lang="ts" setup>
-const { headlineFont, bodyFont } = useDesign();
+const { headlineFont, bodyFont } = useContext().theme;
 
 useHead({
   link: [
